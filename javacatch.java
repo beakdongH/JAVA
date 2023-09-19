@@ -131,3 +131,51 @@ public class ArrayArgumentMethod {
         System.out.println(Arrays.toString(a));
     }
 }
+
+
+package ch04;
+
+public class EffectOfPrimaryArgument {
+    public static void main(String[] args){
+        int a=3;
+        int result1 = twice(3);
+        System.out.println(result1);
+        int result2 = twice(a);
+        System.out.println(result2);
+        System.out.println(a);
+
+        //다른다라의 메서드에 있는 a와 우리 메서드 a는 서로 다른 a이므로 바뀌지 않았다.
+        //call by value 예시 : 변수의 주소가 아닌 값만 딱 전달하는 예시
+
+    }
+    public static int twice(int a){
+        a = a*2;
+        return a;
+
+    }
+
+}
+
+package ch05;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
+public class EffectOfReferenceArgument {
+    public static void main(String[] args){
+        int[] a = new int[] {1,2,3};
+        System.out.println(Arrays.toString(a));
+        twice(a);
+        System.out.println(Arrays.toString(a));
+        //call by reference 예시 : 값을 전달한 것이 아닌 주소를 전달했기 때문에
+        //main 메서드의 a와 twice 메서드의 a는 같은 배열 이므록 같이 값이 바뀌었다
+
+    }
+
+    public static void twice(int[] a){
+        for(int i=0;i<a.length;i++){
+            a[i] = a[i] * 2;
+        }
+    }
+}
+
