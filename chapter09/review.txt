@@ -1,0 +1,36 @@
+IJ단축키
+
+alt+1 : 왼쪽의 프로젝트로 옮겨가는 것 (상태에서 esc 누르면 다시 코드창으로)
+alt+Ins : 파일 추가
+ctrl+shift+f12 : 코드창 전체화면
+ctrl+/ : 주석 달기(//)
+ctrl+shift+/ : 주석 달기(/* */)
+ctrl+shift+↑,↓ : 해당 줄의 위치를 원하는 곳으로 이동 가능
+ctrl+d : 원하는 줄을 복사 가능
+ctrl+x : 잘라내기
+ctrl+v : 붙여넣기
+shift+enter : 줄 내림
+ctrl+f : 해당 파일에서 검색어 찾기(다음 단어로 넘어가는 것은 enter 그 전 단어는 shift+enter)
+ctrl+shift+enter : 전체파일에서 검색어 찾기
+shift+shift : IJ가 지원하는 모든 기능 찾기
+ctrl+tab : 선택한 부분 들여쓰기
+ctrl+shift+i : 선택부분 내려쓰기
+ctrl+alt+i : 정렬
+
+sout : System.out.println(); 의 준말
+psvm : public static void main(String[] args){} 의 준말
+
+=========================================================================================================
+
+chapter09 복습
+<자바 접근 지정자>
+1.필드와 메서드 앞에 오는 것
+    ㄱ.public:어디서나 사용 가능(*)
+    ㄴ.protected:같은 패키지, 다른 패키지의 자식 클래스까지 사용가능
+    ㄷ.default:같은 패키지 안에서만 사용가능
+    ㄹ.private:같은 패키지의 같은 파일에서만 사용가능(*)
+
+
+2.클래스 앞에 오는 것
+    ㄱ.public:다른 클래스에서 해당 클래스를 부를 수 있다.
+    ㄴ.default:다른 클래스에서 import를 할 수 없다.
